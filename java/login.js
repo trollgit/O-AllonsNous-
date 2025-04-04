@@ -18,3 +18,7 @@ document.getElementById("logout").addEventListener("click", (e) => {
         window.location.href = "login.html"; // Redirige vers la page de connexion
     });
 });
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+import { app } from "./firebase-config.js";  // ✅ Assurez-vous que Firebase est initialisé
+
+const auth = getAuth(app);  // Utilisez votre instance Firebase
