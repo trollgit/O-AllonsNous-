@@ -66,3 +66,11 @@ async function drawRandomIdea() {
 
 // Attacher l'événement au bouton
 randomButton.addEventListener('click', drawRandomIdea);
+
+// Gestionnaire de déconnexion
+document.getElementById("logout").addEventListener("click", (e) => {
+    e.preventDefault();
+    signOut(getAuth()).then(() => {
+        window.location.href = "login.html"; // Redirige vers la page de connexion
+    });
+});
