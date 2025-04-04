@@ -1,5 +1,3 @@
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
-
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
     if (!user) window.location.href = "login.html";  // Redirige si non connecté
@@ -8,7 +6,7 @@ onAuthStateChanged(auth, (user) => {
 // Importation des modules Firebase v9
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
-
+import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"; 
 // Configuration Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCxupN3mXqxaNjc1LAvDbL7Z3gML7vPYE",
