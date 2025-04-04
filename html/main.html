@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Accueil - Random Idée</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Assurez-vous que FontAwesome est bien chargé -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<script type="module" src="../js/logout.js"></script>
 <body>
+    <!-- En-tête -->
     <header>
         <h1>Random Idée</h1>
     </header>
+
+    <!-- Barre de navigation -->
     <nav>
         <a href="adideas.html"><i class="fas fa-plus"></i> Ajouter une Idée</a>
         <a href="random.html"><i class="fas fa-random"></i> Tirage au Sort</a>
         <a href="printideas.html"><i class="fas fa-list"></i> Voir les Idées</a>
-    <!-- Ajoutez ceci à la fin -->
-    <a href="#" id="logout" style="color: #ff4c4c;">
-        <i class="fas fa-power-off"></i> Déconnexion
-    </a>
+        <a href="#" id="logout" style="color: #ff4c4c;">
+            <i class="fas fa-power-off"></i> Déconnexion
+        </a>
     </nav>
+
+    <!-- Contenu principal -->
     <main>
         <h2>Bienvenue sur Random Idée</h2>
         <p>Un endroit pour inspirer vos sorties ou moments spéciaux.</p>
 
-        <!-- Section avec les boutons -->
         <div class="button-container">
             <a href="adideas.html" class="button">
                 <i class="fas fa-plus"></i>
@@ -44,8 +45,13 @@
         </div>
     </main>
 
+    <!-- Pied de page -->
     <footer>
         <p>&copy; 2024 | Tous droits réservés</p>
     </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="../java/auth-check.js"></script>  <!-- Vérification de connexion -->
+    <script type="module" src="../java/logout.js"></script>      <!-- Gestion de la déconnexion -->
 </body>
 </html>
