@@ -70,3 +70,11 @@ loadIdeas();
 
 // Attacher `deleteIdea` à l'objet global pour qu'il soit accessible
 window.deleteIdea = deleteIdea;
+
+// Gestionnaire de déconnexion
+document.getElementById("logout").addEventListener("click", (e) => {
+    e.preventDefault();
+    signOut(getAuth()).then(() => {
+        window.location.href = "login.html"; // Redirige vers la page de connexion
+    });
+});
