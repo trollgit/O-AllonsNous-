@@ -11,3 +11,10 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
         .then(() => window.location.href = "main.html")  // Redirige si succès
         .catch(() => alert("Accès refusé"));  // Message générique
 });
+// Gestionnaire de déconnexion
+document.getElementById("logout").addEventListener("click", (e) => {
+    e.preventDefault();
+    signOut(getAuth()).then(() => {
+        window.location.href = "login.html"; // Redirige vers la page de connexion
+    });
+});
