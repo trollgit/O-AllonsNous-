@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Random Idée</title>
-    <link rel="stylesheet" href="css/style.css">  <!-- Réutilisez votre CSS existant -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">  <!-- Adaptez le chemin si nécessaire -->
 </head>
- <script type="module" src="../js/login.js"></script>
 <body>
     <header>
         <h1>Connexion</h1>
     </header>
+
     <main>
-        <form id="login-form">  <!-- ✅ ID correct -->
-    <input type="text" id="email" placeholder="user1@randomidee.com" required>  <!-- ✅ ID email -->
-    <input type="password" id="password" placeholder="Mot de passe" required>   <!-- ✅ ID password -->
-    <button type="submit">Se connecter</button>  <!-- ✅ Type submit -->
-</form>
+        <form id="login-form">
+            <input type="text" id="email" placeholder="user1@randomidee.com" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
     </main>
+
+    <!-- Script Firebase (attention au chemin vers le dossier java/) -->
+    <script type="module" src="../java/login.js"></script>
 </body>
 </html>
