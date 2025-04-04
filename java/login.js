@@ -1,7 +1,5 @@
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
-import { app } from "./firebase-config.js";  // ✅ Assurez-vous que Firebase est initialisé
-
-const auth = getAuth(app);  // Utilisez votre instance Firebase
+import { auth } from "./firebase-config.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 
 document.getElementById('login-form').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -9,14 +7,11 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
     const password = document.getElementById('password').value;
 
     signInWithEmailAndPassword(auth, email, password)
-        .then(() => window.location.href = "main.html")  // Redirige si succès
-        .catch(() => alert("Accès refusé"));  // Message générique
+        .then(() => {
+            window.location.href = "main.html";  // Redirection après connexion
+        })
+        .catch((error) => {
+            console.error("Erreur de connexion:", error);
+            alert("Email ou mot de passe incorrect !");
+        });
 });
-// Gestionnaire de déconnexion
-document.getElementById("logout").addEventListener("click", (e) => {
-    e.preventDefault();
-    signOut(getAuth()).then(() => {
-        window.location.href = "login.html"; // Redirige vers la page de connexion
-    });
-});
-
