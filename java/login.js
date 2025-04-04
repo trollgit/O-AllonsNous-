@@ -2,7 +2,6 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 import { app } from "./firebase-config.js";  // ✅ Assurez-vous que Firebase est initialisé
 
 const auth = getAuth(app);  // Utilisez votre instance Firebase
-const auth = getAuth();
 
 document.getElementById('login-form').addEventListener('submit', (e) => {
     e.preventDefault();
