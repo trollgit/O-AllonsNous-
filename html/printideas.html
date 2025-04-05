@@ -3,41 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vos Idées</title>
+    <title>Liste des Idées - Random Idée</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styleprintideas.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<script type="module" src="../js/logout.js"></script>
-<body id="printideas-page">
-    <!-- En-tête -->
+<body>
     <header>
         <h1>Vos Idées</h1>
     </header>
 
-    <!-- Barre de navigation -->
     <nav>
         <a href="main.html"><i class="fas fa-home"></i> Accueil</a>
         <a href="adideas.html"><i class="fas fa-plus"></i> Ajouter une idée</a>
         <a href="random.html"><i class="fas fa-random"></i> Tirage au Sort</a>
         <a href="#" id="logout" style="color: #ff4c4c;">
-        <i class="fas fa-power-off"></i> Déconnexion
-    </a>
+            <i class="fas fa-power-off"></i> Déconnexion
+        </a>
     </nav>
 
-    <!-- Contenu principal -->
     <main>
         <h2>Total d'idées : <span id="total-ideas">0</span></h2>
-        <ul id="ideas-list"></ul>
+        <ul id="ideas-list" class="ideas-container"></ul>
     </main>
 
-    <!-- Pied de page -->
     <footer>
-        <p>&copy; 2024</p>
+        <p>&copy; 2024 - Random Idée</p>
     </footer>
 
-    <!-- Script pour la gestion des idées -->
-    <script src="../java/app.js" type="module"></script>
+    <!-- Scripts -->
+    <script type="module" src="../java/auth-check.js"></script>
+    <script type="module" src="../java/logout.js"></script>
+    <script type="module" src="../java/printideas.js"></script>
 </body>
 </html>
