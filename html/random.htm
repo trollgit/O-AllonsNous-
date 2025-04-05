@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirage au Sort - Random Idée</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylerandom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-random"></i> Tirage au Sort</h1>
+    </header>
+
+    <nav>
+        <a href="main.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="adideas.html"><i class="fas fa-plus"></i> Ajouter une idée</a>
+        <a href="printideas.html"><i class="fas fa-list"></i> Voir les idées</a>
+        <a href="#" id="logout" style="color: #ff4c4c;">
+            <i class="fas fa-power-off"></i> Déconnexion
+        </a>
+    </nav>
+
+    <main>
+        <div class="counter-container">
+            <h2>Idées disponibles : <span id="total-ideas">0</span></h2>
+        </div>
+        
+        <button id="draw-button" class="cta-button">
+            <i class="fas fa-random"></i> Tirer une idée
+        </button>
+
+        <div id="random-idea" class="idea-card">
+            <p class="placeholder">Cliquez sur le bouton pour obtenir une idée aléatoire</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Random Idée</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="../java/auth-check.js"></script>
+    <script type="module" src="../java/logout.js"></script>
+    <script type="module" src="../java/random-idea.js"></script>
+</body>
+</html>
